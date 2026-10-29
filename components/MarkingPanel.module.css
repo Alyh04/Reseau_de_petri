@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.head {
+  flex-shrink: 0;
+  padding: 5px 10px 4px;
+  color: var(--t2);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--bdr);
+}
+
+.body {
+  flex: 1;
+  padding: 4px 8px;
+  overflow-y: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--t2);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 2;
+}
+
+.value {
+  color: var(--t0);
+  font-weight: 700;
+}
+
+.highlight {
+  color: var(--blue);
+}

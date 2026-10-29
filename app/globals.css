@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Design tokens & base — Petri Traffic
+   ========================================================================== */
+
+:root {
+  --bg0: #f4f6f9;
+  --bg1: #ffffff;
+  --bg2: #f0f2f5;
+  --bg3: #e5e9ef;
+  --bg4: #d0d6e0;
+
+  --bdr: rgba(0, 0, 0, 0.09);
+  --bdr-hi: rgba(0, 0, 0, 0.18);
+
+  --t0: #1a1d21;
+  --t1: #4a5568;
+  --t2: #5a6b82;
+
+  --blue: #1d6cc8;
+  --blue-d: #1452a0;
+  --green: #166534;
+  --green-d: #14532d;
+  --red: #991b1b;
+  --red-d: #7f1d1d;
+  --amber: #92400e;
+  --amber-d: #78350f;
+
+  --tok-r: #dc2626;
+  --tok-g: #16a34a;
+  --tok-o: #ea580c;
+  --tok-b: #2563eb;
+
+  --c-red: #dc2626;
+  --c-green: #16a34a;
+
+  --radius: 6px;
+  --radius-m: 10px;
+  --radius-l: 16px;
+
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", "Cascadia Code", "Fira Code", Consolas, monospace;
+
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: var(--bg0);
+  color: var(--t0);
+  font-family: var(--font);
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--blue) 20%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Scrollbars discrètes, cohérentes avec le reste de l'interface. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg4) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--bg4);
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  body {
+    height: auto;
+    overflow: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
