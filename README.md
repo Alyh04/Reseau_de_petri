@@ -1,4 +1,4 @@
-# 🚦 Simulation Réseau de Petri — Carrefour à 4 directions
+# Simulation Réseau de Petri — Carrefour à 4 directions
 
 Simulation interactive d'un carrefour **Nord/Sud/Est/Ouest** modélisé par un réseau de Petri,
 avec feux tricolores, files d'attente, flux de véhicules et analyse formelle.
